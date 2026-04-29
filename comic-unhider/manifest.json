@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "League of Comic Geeks Variant Revealer",
+  "version": "1.2",
+  "description": "Toggle hidden comic variants and force-load images on leagueofcomicgeeks.com.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://leagueofcomicgeeks.com/*", "https://www.leagueofcomicgeeks.com/*"],
+  "action": {
+    "default_title": "Toggle Hidden Variants",
+    "default_popup": "popup/popup.html",
+    "default_icon": "user-menu-logo-icon.png"
+  },
+  "commands": {
+    "toggle-variants": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Toggle hidden variants on/off"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leagueofcomicgeeks.com/*", "https://www.leagueofcomicgeeks.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+
+}
