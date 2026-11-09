@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Digimon Card Image Scraper",
-  "version": "1.0",
-  "description": "Scrapes and downloads card images from the cardlist DOM structure.",
+  "name": "Digimon Card URL-Hash ZIP Scraper",
+  "version": "1.4",
+  "description": "Scrapes Digimon card images across pages using URL hash pagination (#page-X) and packages them into a single ZIP archive.",
   "permissions": [
     "activeTab",
-    "downloads",
     "scripting"
   ],
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup.html"
   }
 }
