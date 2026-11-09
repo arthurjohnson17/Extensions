@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Comics Grid View",
+  "version": "1.0",
+  "description": "Replaces comics.org listings with a responsive grid of covers.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "gcd_logo.png"
+
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.comics.org/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+  "128": "gcd_logo.png"
+}
+}

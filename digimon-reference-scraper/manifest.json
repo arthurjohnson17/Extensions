@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Digimon Card Image Scraper",
+  "version": "1.0",
+  "description": "Scrapes and downloads card images from the cardlist DOM structure.",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
